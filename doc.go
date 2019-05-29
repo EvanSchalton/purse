@@ -2,7 +2,7 @@
 //
 // To install the package, use go install:
 //
-// 		$ go get -u github.com/smotes/purse
+// 		$ go get -u github.com/EvanSchalton/purse
 //
 // purse is also a command line tool to automate the creation of a Purse implementation given a specified
 // directory of SQL files. Given the directory of SQL files and the directory of the output file,
@@ -17,7 +17,7 @@
 //
 // To install the tool, use go install:
 //
-//		$ go get -u github.com/smotes/purse/cmd/purse
+//		$ go get -u github.com/EvanSchalton/purse/cmd/purse
 //		$ purse [args]
 //
 // The command syntax is:
@@ -46,4 +46,4 @@
 // Note that the `-pack` flag is not necessary when using go generate, as it sets the environment variable
 // automatically. Refer to the [documentation](https://golang.org/cmd/go/) on the `go` command for more information.
 //
-package purse // import "github.com/smotes/purse"
+package purse // import "github.com/EvanSchalton/purse"
