@@ -81,6 +81,17 @@ func (p *MemoryPurse) Get(filename string) (v string, ok bool) {
 	return
 }
 
+// GetSQL returns a SQL file's contents as a string.
+// this function does not return the error, allowing for
+// it to be used inline, ignoring errors.
+func (p *MemoryPurse) GetSQL(filename string) (v string) {
+	p.mu.RLock()
+	v, ok = p.files[filename]
+	// May want to panic on !ok
+	p.mu.RUnlock()
+	return
+}
+
 // Files returns a slice of filenames for all loaded SQL files.
 func (p *MemoryPurse) Files() []string {
 	fs := make([]string, len(p.files))
